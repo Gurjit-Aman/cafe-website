@@ -1,10 +1,13 @@
 pipeline {
     agent any
+    environment {
+        DOCKER_IMAGE = 'Gurjit-Aman/website-cafe-img:v3'
+    }
     stages {
         stage('Clone Repository') {
             steps {
                 // Clone the Git repository containing your website template
-                git 'https://github.com/your-username/website-template.git'
+                git 'https://github.com/Gurjit-Aman/cafe-website.git'
             }
         }
         
@@ -26,4 +29,4 @@ pipeline {
             }
         }
     }
-    
+} 
